@@ -16,8 +16,8 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+line_bot_api = LineBotApi(os.environ['LINE_TOKEN'])
+handler = WebhookHandler(os.environ['LINE_SECRET'])
 
 DB_PATH = 'user.sqlite'
 GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfGLLaY3lC6KN2UNQdmP8bteFAZVmU-WJTYnhWpvY-3C3rIkw/viewform"
